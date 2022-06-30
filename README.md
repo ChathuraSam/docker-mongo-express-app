@@ -1,12 +1,23 @@
-# Docker-Mongo-Express App
-My first NodeJS and MongoDB application on Docker
+# NodeJS-MongoDb Dockerize App
 
-# Docker Commands Use to run the application
+### Setup the nodeJS application to run
 
-## Create a common network in order to run the containers
+1. clone the project in to local drive
+2. run ```npm install```
+
+### Setup the docker environment
+1. run ```docker pull mongo```
+2. run ```docker pull mongo-express```
+
+Above two codes will pull the required two images from docker-hub
+
+## Docker Commands Use to run the application
+Following commands will use to configure the environment
+
+### Create a common network in order to run the containers
 ```docker network create mongo-network```
 
-## Start mongodb
+### Start mongodb
 ```
 docker run -d \
 -p 27017:27017 \
@@ -17,7 +28,7 @@ docker run -d \
 mongo
 ```
 
-## Start mongo-express (the UI application)
+### Start mongo-express (the UI application)
 ```
 docker run -d \
 -p 8081:8081 \
@@ -33,7 +44,7 @@ The \ after every line may be differ in windows.
 In windows you can use `
 
 
-# How to run with docker-compose
+### How to run with docker-compose
 
 Create the .yaml file to run ```docker-compose```
 The [.yaml] file available in the code base
